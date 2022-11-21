@@ -65,7 +65,7 @@ export default function Weather() {
       <small>
         This project was coded by Sviatlana Buksa and is{" "}
         <a
-          href="https://github.com/SviatlanaBuksa/Vanilla-weather-app"
+          href="https://github.com/SviatlanaBuksa/react-weather-app"
           target="_blank"
           rel="noreferrer"
         >
