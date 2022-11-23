@@ -61,25 +61,6 @@ export default function Weather() {
           <span className="units">°F</span>
         </div>
       </div>
-      <hr />
-      <small>
-        This project was coded by Sviatlana Buksa and is{" "}
-        <a
-          href="https://github.com/SviatlanaBuksa/react-weather-app"
-          target="_blank"
-          rel="noreferrer"
-        >
-          open-sourced on GitHub{" "}
-        </a>
-        and{" "}
-        <a
-          href="https://kaleidoscopic-gaufre-5a8b1e.netlify.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          hosted on Netlify
-        </a>
-      </small>
     </div>
   );
 }
