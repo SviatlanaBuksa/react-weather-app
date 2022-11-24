@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
+import BarLoader from "react-spinners/BarLoader";
 
 export default function Weather(props) {
   const [weatherData, setWeatherdata] = useState({ loaded: false });
@@ -77,6 +78,10 @@ export default function Weather(props) {
       });
     }
 
-    return "Loading...";
+    return (
+      <div className="sweet-loading d-flex justify-content-center">
+        <BarLoader color="#885df1" />
+      </div>
+    );
   }
 }
