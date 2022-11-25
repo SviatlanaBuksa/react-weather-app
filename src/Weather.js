@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 import BarLoader from "react-spinners/BarLoader";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherdata] = useState({ loaded: false });
@@ -45,7 +46,7 @@ export default function Weather(props) {
                   </span>
                 </li>
                 <li>
-                  Last update: <span>{weatherData.date}</span>
+                  <FormattedDate date={weatherData.date} />
                 </li>
               </ul>
             </div>
@@ -73,7 +74,7 @@ export default function Weather(props) {
         temperature: response.data.temperature.current,
         humidity: response.data.temperature.humidity,
         wind: response.data.wind.speed,
-        date: response.data.time,
+        date: new Date(response.data.time * 1000),
         iconUrl: response.data.condition.icon_url,
       });
     }
