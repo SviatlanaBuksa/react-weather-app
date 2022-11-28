@@ -4,8 +4,8 @@ import TemperatureConversion from "./TemperatureConversion";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="WeatherInfo">
-      <div className="row mt-4">
+    <div className="WeatherInfo ">
+      <div className="row mt-4 mb-4">
         <div className="col-md-6 col-sm-12">
           <div className="description">
             <h1>{props.data.city}</h1>

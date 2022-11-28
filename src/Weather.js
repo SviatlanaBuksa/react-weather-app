@@ -4,6 +4,7 @@ import axios from "axios";
 import BarLoader from "react-spinners/BarLoader";
 
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherdata] = useState({ loaded: false });
@@ -62,6 +63,7 @@ export default function Weather(props) {
         </form>
         <hr />
         <WeatherInfo data={weatherData} />
+        <WeatherForecast />
       </div>
     );
   } else {
