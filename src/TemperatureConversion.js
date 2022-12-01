@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function TemperatureConversion(props) {
-  const [unit, setUnit] = useState("celsius");
-
   return (
     <div className="TemperatureConversion">
       <span className="current-temperature">{Math.round(props.celsius)}</span>
