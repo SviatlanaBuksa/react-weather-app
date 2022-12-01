@@ -8,7 +8,7 @@ export default function WeatherForecast({ newCity }) {
   const [forecastData, setForecastData] = useState(null);
 
   function getForecast(response) {
-    setForecastData(response.data.daily[0]);
+    setForecastData(response.data.daily);
     setLoaded(true);
   }
 
@@ -20,7 +20,15 @@ export default function WeatherForecast({ newCity }) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <WeatherForecastDay data={forecastData} />
+          {forecastData.map(function (dailyForecast, index) {
+            if (index < 6) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDay data={dailyForecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
