@@ -27,6 +27,8 @@ export default function WeatherForecast({ newCity }) {
                   <WeatherForecastDay data={dailyForecast} />
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>
